@@ -21,8 +21,12 @@ console.log(document.domain);
 
 
 //imprimir imagenes
-let imagenes = document.getElementsByTagName("img");
-console.log(imagenes);
+var imagenes = document.querySelectorAll("img");
+let imag=[]
+for(let j = 0;j<imagenes.length;j++){
+   imag+=imagenes[j].src+" "
+}
+console.log(imag);
 
 
 
@@ -35,7 +39,7 @@ for (let i = 0; i < imagenes.length; i++) {
 
 
 //selecionar flying
-let voladores = document.getElementsByClassName("flying")
+let voladores = document.querySelectorAll(".flying")
 for (let i = 0; i < voladores.length; i++) {
     voladores[i].style.backgroundColor = "red"
 
